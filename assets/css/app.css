@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #0e549f;
+  --color-secondary: #157ceb;
+  --color-blue: #5ba1eb;
+  --color-black: #161616;
+  --color-white: #ffffff;
+  --color-gray: #7d8e9f;
+
+  --transition: all 0.2s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 120%;
+}
+
+h1 {
+  font-size: 50px;
+  list-style: 64px;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -0.5px;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-family: "Kaisei Opti";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: var(--color-gray);
+}
+
+h6 {
+  font-weight: 600;
+  font-style: 12px;
+}
+
+p {
+  font-size: 16px;
+  margin: 25px 0 15px 0;
+}
+
+a {
+  cursor: pointer;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  position: relative;
+  width: 100%;
+  height: 5843px;
+  background: var(--color-white);
+}
+
+.section-lg {
+  /* position: absolute;
+  left: 0px;
+  top: 0px; */
+  width: inherit;
+  height: 1024px;
+  background: inherit;
+}
+
+.section-md {
+  /* position: absolute;
+  left: 0px;
+  top: 0px; */
+  width: inherit;
+  height: 512px;
+}
+
+.title-section {
+  position: relative;
+  margin-left: 39.5%;
+  width: 600px;
+  padding-top: 62px;
+}
+
+.title-section h4 {
+  color: var(--color-gray);
+}
+
+.title-section h4::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 80px;
+  left: -60px;
+}
+
+/* ===================== Header ========================== */
+
+#wrapper-navbar {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main-nav img {
+  width: 199px;
+  height: 62px;
+}
+
+#main-menu li a {
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: var(--transition);
+  color: var(--color-black);
+  position: relative;
+}
+
+#main-menu li a:hover,
+#main-menu li a.active {
+  color: var(--color-primary);
+}
+
+#main-menu li a:hover::after,
+#main-menu li a.active::after {
+  content: "";
+  width: 60%;
+  height: 6px;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+/* ===================== banner ========================== */
+#banner {
+  background-image: url(../images/home_banner_slide_01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#banner div {
+  position: absolute;
+  top: 230px;
+  left: 20.5%;
+}
+
+#banner h1 {
+  font-family: "Kaisei Opti";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 72px;
+  letter-spacing: -0.5px;
+}
+
+#banner button {
+  margin-top: 27px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--color-white);
+  padding: 15px 39px;
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+/* ===================== banner ========================== */
+#about .about-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px !important;
+  gap: 4%;
+  margin-top: 132px;
+  margin-bottom: 72px;
+}
+
+.about-watermark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 53%;
+  height: 302px;
+  left: calc(50% - 53% / 2);
+  top: calc(50% - 302px / 2 - 2189.5px);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 220px;
+  letter-spacing: -3.5px;
+  color: #eceff2;
+  text-align: center;
+}
+
+.about-card .card {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 15px 27px;
+  height: 180px;
+  border: none;
+}
+
+.about-card .card .card-body {
+  padding: 0 !important;
+}
+
+.about-card .card .card-title {
+  color: var(--color-white);
+  letter-spacing: 0;
+}
+
+.about-card .card .card-text {
+  margin: 22px 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: #c0c9d1;
+}
+
+/* ===================== what ait do ========================== */
+#wad .wad-content {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+}
+
+#wad .wad-content h2 {
+  margin: 10px;
+}
+
+#wad .wad-watermark,
+#wad .wad-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px !important;
+  gap: 3%;
+}
+
+#wad .wad-watermark {
+  position: absolute;
+  width: 68%;
+  height: 109px;
+  left: 16%;
+  top: 1352px;
+}
+
+#wad .wad-card {
+  margin-top: 82.5px;
+}
+
+#wad .wad-watermark .card,
+#wad .wad-card .card {
+  width: 24%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 110px;
+  text-align: right;
+  letter-spacing: -3.5px;
+  color: #eceff2;
+  border: none;
+}
+
+#wad .wad-card .card {
+  text-align: left;
+  background: #edf0f2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  height: 193px;
+  border-radius: 10px;
+}
+
+#wad .wad-watermark .card .card-body {
+  padding: 0 !important;
+}
+
+#wad .wad-card .card .card-title {
+  color: var(--color-primary);
+  letter-spacing: 0;
+}
+
+#wad .wad-card .card-text,
+#wad .wad-card .card-text a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: var(--color-gray);
+  margin: 20px 0;
+}
+
+#wad .wad-card .card-text a {
+  text-decoration: none;
+  color: #c0c9d1;
+  margin-left: 56%;
+}
