@@ -22,16 +22,13 @@
 h1 {
   font-size: 50px;
   list-style: 64px;
-  color: var(--color-primary);
 }
 
 h2 {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
   letter-spacing: -0.5px;
-  color: var(--color-primary);
 }
 
 h3 {
@@ -40,7 +37,6 @@ h3 {
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 1px;
-  color: var(--color-primary);
 }
 
 h4 {
@@ -48,12 +44,31 @@ h4 {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 5px;
-  color: var(--color-gray);
 }
 
 h6 {
   font-weight: 600;
   font-style: 12px;
+}
+
+.text-0 {
+  color: #1054a1;
+}
+
+.text-1 {
+  color: #eceff2;
+}
+
+.text-2 {
+  color: #c0c9d1;
+}
+
+.text-3 {
+  color: #7d8e9f;
+}
+
+.text-4 {
+  color: #161616;
 }
 
 p {
@@ -79,7 +94,6 @@ body {
   left: 0px;
   top: 0px; */
   width: inherit;
-  height: 1024px;
   background: inherit;
 }
 
@@ -88,14 +102,12 @@ body {
   left: 0px;
   top: 0px; */
   width: inherit;
-  height: 512px;
 }
 
 .title-section {
   position: relative;
   margin-left: 39.5%;
-  width: 600px;
-  padding-top: 62px;
+  width: 700px;
 }
 
 .title-section h4 {
@@ -105,12 +117,16 @@ body {
 .title-section h4::before {
   content: "";
   width: 36px;
-  height: 2px;
+  height: 3px !important;
   border-radius: 5px;
   background-color: var(--color-gray);
   position: absolute;
-  top: 80px;
+  top: 46px;
   left: -60px;
+}
+
+.card-body {
+  padding: 0;
 }
 
 /* ===================== Header ========================== */
@@ -129,24 +145,26 @@ body {
   height: 62px;
 }
 
+#main-menu li {
+  position: relative;
+}
+
 #main-menu li a {
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
   transition: var(--transition);
   color: var(--color-black);
-  position: relative;
 }
 
-#main-menu li a:hover,
-#main-menu li a.active {
-  color: var(--color-primary);
+#main-menu li:hover,
+#main-menu li.active {
+  color: var(--color-primary) !important;
 }
 
-#main-menu li a:hover::after,
-#main-menu li a.active::after {
+#main-menu li.active::after {
   content: "";
-  width: 60%;
+  width: 100%;
   height: 6px;
   position: absolute;
   top: 50px;
@@ -159,13 +177,7 @@ body {
 #banner {
   background-image: url(../images/home_banner_slide_01.png);
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#banner div {
-  position: absolute;
-  top: 230px;
-  left: 20.5%;
+  background-size: 100% 512px;
 }
 
 #banner h1 {
@@ -175,6 +187,10 @@ body {
   font-size: 50px;
   line-height: 72px;
   letter-spacing: -0.5px;
+}
+
+#banner .banner-title {
+  margin: 230px 0 62px;
 }
 
 #banner button {
@@ -190,12 +206,15 @@ body {
 }
 
 /* ===================== banner ========================== */
+#about .title-section {
+  padding-top: 62px;
+}
+
+#about .title-section h4::before {
+  top: 80px;
+}
+
 #about .about-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px !important;
-  gap: 4%;
   margin-top: 132px;
   margin-bottom: 72px;
 }
@@ -213,7 +232,6 @@ body {
   font-weight: 600;
   font-size: 220px;
   letter-spacing: -3.5px;
-  color: #eceff2;
   text-align: center;
 }
 
@@ -225,12 +243,7 @@ body {
   border: none;
 }
 
-.about-card .card .card-body {
-  padding: 0 !important;
-}
-
 .about-card .card .card-title {
-  color: var(--color-white);
   letter-spacing: 0;
 }
 
@@ -240,10 +253,13 @@ body {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.25px;
-  color: #c0c9d1;
 }
 
 /* ===================== what ait do ========================== */
+#wad .title-section {
+  padding-top: 27px;
+}
+
 #wad .wad-content {
   margin-top: 25px;
   display: flex;
@@ -259,16 +275,11 @@ body {
 
 #wad .wad-watermark,
 #wad .wad-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   padding: 0px !important;
-  gap: 3%;
 }
 
 #wad .wad-watermark {
   position: absolute;
-  width: 68%;
   height: 109px;
   left: 16%;
   top: 1352px;
@@ -280,32 +291,29 @@ body {
 
 #wad .wad-watermark .card,
 #wad .wad-card .card {
-  width: 24%;
   font-style: normal;
   font-weight: 600;
   font-size: 110px;
   text-align: right;
   letter-spacing: -3.5px;
-  color: #eceff2;
   border: none;
 }
 
 #wad .wad-card .card {
   text-align: left;
-  background: #edf0f2;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(4px);
-  height: 193px;
   border-radius: 10px;
+  background-color: #edf0f2;
 }
 
-#wad .wad-watermark .card .card-body {
-  padding: 0 !important;
+#wad .wad-card .card-body {
+  height: 193px;
 }
 
 #wad .wad-card .card .card-title {
-  color: var(--color-primary);
   letter-spacing: 0;
+  margin: 15px 18px 0;
 }
 
 #wad .wad-card .card-text,
@@ -314,12 +322,297 @@ body {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.25px;
-  color: var(--color-gray);
-  margin: 20px 0;
+  margin: 20px 18px 0;
 }
 
 #wad .wad-card .card-text a {
   text-decoration: none;
   color: #c0c9d1;
-  margin-left: 56%;
+  margin: 0 0 15px 100px;
+}
+
+.idea-item {
+  background-color: var(--color-primary);
+}
+
+.wad-choose {
+  text-align: center;
+}
+
+.wad-choose .wad-choose__icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #edf0f2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.wad-choose__icon img {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 78px;
+}
+
+.wad-choose__icon #icon-human {
+  width: 70px;
+  top: 10px;
+  left: 10px;
+}
+
+.wad-choose__icon #icon-security {
+  width: 45px;
+  top: 22px;
+  left: 22px;
+}
+
+.wad-choose__icon #icon-tech {
+  width: 52px;
+  top: 24px;
+  left: 19.5px;
+}
+
+.wad-choose__icon #icon-cost {
+  width: 55px;
+  top: 18px;
+  left: 17.5px;
+}
+
+.wad-choose .wad-choose__text {
+  margin: 22px 9.5px 0;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* ====================================================== */
+
+#main-company {
+  background-color: #f5f5f5;
+}
+
+#main-company .title-section {
+  padding-top: 29px;
+}
+
+#main-company .main-company__text {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+#main-company .row {
+  margin: 55px 0 43px;
+}
+
+#main-company .main-company__link {
+  margin-top: 25px;
+  text-align: right;
+}
+
+.main-company__link a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: #c0c9d1;
+}
+#main-company .main-company__link a:hover {
+  color: #7d8e9f;
+}
+
+#main-company .main-company__image {
+  text-align: right;
+}
+
+/* ================================================= */
+#main-people {
+  background-color: var(--color-primary);
+}
+
+#main-people .main-people__text {
+  margin: 49px 0 13px;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+#main-people .main-people__subtext {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: right;
+  letter-spacing: -0.5px;
+}
+
+/* ============================================== */
+#main-info {
+  background-image: url(../images/pic-bg-company.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 512px;
+}
+
+#main-info .main-info__content {
+  margin: 111px 0 148px;
+}
+
+#main-info .main-info__title {
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -0.5px;
+}
+
+#main-info .main-info__data {
+  margin-top: 38.5px;
+}
+
+#main-info .main-info__number {
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: -0.5px;
+  color: #ff5454;
+}
+
+#main-info .main-info__text {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* =========================================== */
+#careers {
+  background-color: var(--color-primary);
+}
+
+#careers .title-section {
+  padding-top: 47px;
+}
+
+#careers .title-section h4::before {
+  top: 63px;
+}
+
+#careers .careers-card {
+  margin-top: 127px;
+}
+
+#careers .careers-card__item {
+  padding: 60px 50px;
+  border-radius: 10px;
+}
+
+#careers .card-body {
+  text-align: center;
+}
+
+#careers .careers-card__image {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-bottom: 53px;
+}
+
+#careers .careers-card__title {
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+#careers .careers-card__text {
+  margin: 27px 0 53px;
+  font-weight: 400;
+  font-size: 18px;
+  height: 66px;
+}
+
+#careers .careers-card__btn {
+  padding: 15px 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  border-radius: 100px;
+}
+
+#careers .careers-span {
+  padding: 34px 0 30px;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+/* ======================================= */
+
+#blog .title-section {
+  padding-top: 29px;
+}
+
+#blog .blog-card {
+  margin: 110px 0 0;
+  padding-bottom: 31px;
+}
+
+#blog .blog-card__item {
+  border: none;
+}
+
+#blog .blog-card__title {
+  margin: 18px 0;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #000000;
+}
+
+#blog .text-muted {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================= */
+#feedback {
+  background-color: #ecf5fc;
+}
+
+#feedback .title-section {
+  padding-top: 30px;
+}
+
+#feedback .feedback-client {
+  margin-top: 61px;
+}
+
+#feedback .feedback__image {
+  width: 100px;
+  height: 100px;
+  margin-right: 9px;
+}
+
+#feedback p {
+  margin: 0;
+}
+
+#feedback .feedback__content {
+  padding: 19px 28px 31px 0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#feedback .feedback__text {
+  font-size: 16px;
+  letter-spacing: 0.15px;
+}
+
+#feedback .feedback__author {
+  font-family: "Kaisei Opti";
+  line-height: 20px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 9px 0 8px;
+}
+
+#feedback .feedback__info {
+  font-family: "Kaisei Opti";
+  line-height: 20px;
+  letter-spacing: 0.03em;
 }

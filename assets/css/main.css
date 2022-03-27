@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Open+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  line-height: 120%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: #161616;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1054a1;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*  */
+
+.header-backdrop,
+.header-close-btn,
+.header-ait-btn {
+  display: none;
+}
+
+.header .menu-item {
+  display: inline-block;
+}
