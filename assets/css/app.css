@@ -643,41 +643,48 @@ body {
 #wad-page .wad-item-left,
 #wad-page .wad-item-right {
   position: relative;
+  margin-top: 72px;
 }
 
-.wad-item-left .wad-image {
+#wad-page .wad-item-left:first-child {
+  margin-top: -44px;
+}
+
+.wad-item-left .wad-image,
+.wad-item-right .wad-image {
   position: relative;
   z-index: 1;
-}
-
-/* .wad-item-right .wad-image {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-} */
-
-#wad-page .wad-image__url {
   width: 320px;
 }
 
+#wad-page .wad-image__url {
+  width: 100%;
+}
+
 #wad-page .wad-image__sub {
+  position: absolute;
   text-align: center;
   font-weight: 600;
   font-size: 20px;
   letter-spacing: -0.5px;
+  width: 110px;
+  height: 110px;
 }
 
 .wad-item-left .wad-image__sub {
-  position: absolute;
-  top: 133px;
-  left: 133px;
+  top: 100px;
+  left: 125px;
+}
+
+#wad-page .wad-item-left:first-child .wad-image__sub {
+  top: 110px;
+  left: 120px;
 }
 
 .wad-item-right .wad-image__sub {
   position: absolute;
-  top: 133px;
-  right: 80px;
+  top: 100px;
+  left: 120px;
 }
 
 #wad-page .wad-box {
@@ -692,20 +699,14 @@ body {
   position: absolute;
   top: 171px;
   left: 179px;
+  padding-left: 136px;
+  padding-right: 36px;
 }
 
-/* .wad-item-right .wad-box {
+.wad-item-right .wad-box {
   position: absolute;
   top: 171px;
   right: 165px;
-} */
-
-.wad-item-left .wad-box__text {
-  margin-left: 136px;
-  margin-right: 36px;
-}
-
-.wad-item-right .wad-box__text {
-  margin-left: 25px;
-  margin-right: 145px;
+  padding-right: 145px;
+  padding-left: 25px;
 }
