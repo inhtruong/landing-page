@@ -710,3 +710,14 @@ body {
   padding-right: 145px;
   padding-left: 25px;
 }
+
+/* =========================================================================== */
+#company-page {
+  background-color: #e8eef6;
+  padding: 164px 0;
+}
+
+#company-page .company-desc {
+  margin: 55px 0 11px;
+  height: 138px;
+}
